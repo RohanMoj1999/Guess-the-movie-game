@@ -76,12 +76,16 @@ def player(player, movies_list):
                             opt = False
                         else:
                             print('\nWrong answer\n')
+                            print('The movie name:', question)
                             print(player, ' your score is', scorePlayer)
                             status = False
+                            opt = False
+                            cond = False
                     elif choice == 1:
                         print('\nOkay, try again!\n')
                         opt = False
                     elif choice == 2:
+                        print('The movie name:',question)
                         status = False
                         opt = False
                     else:
@@ -96,6 +100,8 @@ def play(movies_list):
     player2 = input('Enter the name of player2:')
     
     print("\nWELCOME TO THE 'GUESS THE MOVIE GAME' {} and {}\n".format(player1,player2))
+    print(" ----- INSTRUCTIONS -----")
+    print("1. Players needs to guess the movie name\n2. Player can only choose a single character at a time\n-- ENJOY ! --")
     
     score1 = 0
     score2 = 0
@@ -106,19 +112,23 @@ def play(movies_list):
             score1 += 1
         if player(player2, movies_list) != 0:
             score2+=1
-        print('Want to play another game ?\n')
+
+        print("--------------------")
+        print("Score of {}: {}".format(player1, score1))
+        print("Score of {}: {}".format(player2, score2))
+        print("--------------------")
+        print('\nWant to play another game ?\n')
         try:
-            choice = int(input('1 to continue and 0 to quit:'))
+            choice = int(input('1 to start new game and 0 to quit:'))
         except:
             print("Choose a valid option!\n")
         else:
             if choice == 0:
-                  cond = False
-                  print("Score of {}: {}".format(player1, score1))  
-                  print("Score of {}: {}".format(player2, score2))
+                print("-- GOOD BYE ! --")
+                cond = False
             else:
                 print("Choose a valid option\n")
 
-movies_list = ['war', 'drishyam', 'avengers', 'avengers endgame', 'thor', '1917', 'commando', 'harry potter deadly hallows', 'sultan', 'dhoom', 'spiderman far from home', 'avengers']
+movies_list = ['war', 'drishyam', 'avengers', 'avengers endgame', 'thor', '1917', 'commando', 'harry potter deadly hallows', 'sultan', 'dhoom', 'spiderman far from home', 'avengers infinity war', 'spiderman no way home', 'avatar', 'doctor strange', 'doctor strange the multiverse of madness', 'jaws', 'doraemon and the steel troops the new age', 'star wars the last jedi', 'fifty shades of grey', 'bhool bhoolaiya', 'sooryavanshi', 'the family man', 'omg oh my god', '1920']
 
 play(movies_list)

@@ -1,3 +1,5 @@
+# Terminal edition
+
 import random
 
 def createQuestion(question):

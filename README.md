@@ -7,5 +7,5 @@ The game is built using ```python``` language and this game can be played via py
 Here is a small demo to show how the game looks like:-
 
 
-https://user-images.githubusercontent.com/62896383/172017972-f4d216b8-2d70-44d6-8f45-6cf5e654304f.mp4
+https://user-images.githubusercontent.com/62896383/172018138-3cb81761-65bc-41a8-a7a6-241bae10dd40.mp4
 
